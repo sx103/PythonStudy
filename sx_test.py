@@ -1,4 +1,5 @@
 """
+This is a test script file for Python
 @author: kenneth.shu
 Created in 2017 Dec.
 """
@@ -9,3 +10,6 @@ print("This is a test Python scripts file created by Kenneth.")
 print(dir())
 print("Invoke saySth function.")
 test_module_2.saySth()
+
+#the new print command line
+print("Let's start a new branch for development of new features")
