@@ -9,7 +9,6 @@ print(dir())
 print("Invoke saySth function.")
 test_module_2.saySth()
 
-#print("Adding a test function here.")
-#print("Adding another test function here")
-
+#the new print command line
 print("Let's start a new branch for development of new features")
+
