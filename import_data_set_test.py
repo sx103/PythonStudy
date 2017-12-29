@@ -3,7 +3,7 @@
 """
 Created on Sun Dec 24 14:14:11 2017
 
-The scripts in this file is to load two columns (numbers) from a CSV file and compare the difference 
+The scripts in this file is to load two columns (numbers) from a CSV file and compare the difference
 between the values in the two columnes.
 
 @author: kenneth.shu
@@ -16,14 +16,14 @@ import math as math
 def removeNaN(alist):
     result_list = []
     for item in alist:
-        if not math.isnan(item):         
+        if not math.isnan(item):
             result_list.append(int(item))
     return result_list
 #end of function
 
 #import the the data
 print('importing the data file')
-dataset = pd.read_csv('/Users/kenneth.shu/dev//Python/set_test_1.csv')
+dataset = pd.read_csv('./set_test_1.csv')
 
 col1 = dataset.iloc[:, 1].values
 col2 = dataset.iloc[:, 2].values
@@ -58,6 +58,3 @@ print("\n")
 print('In both sets : {}'.format(set1 & set2))
 print('In Set1 but not in Set2 :{}'.format(set1 - set2))
 print('In Set2 but not in Set1 :{}'.format(set2 - set1))
-
-
-
