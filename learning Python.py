@@ -135,7 +135,7 @@ print('My shopping list is now', shoplist)
 testlist = (2, 2, 3, 4,)
 print(testlist)
 print("length of this tuple is ", len(testlist))
-
+testlist[2]
 
 
 # Dictionary test scripts
@@ -147,6 +147,7 @@ ab = {
       'Matsumoto': 'matz@ruby-lang.org',
       'Spammer': 'spammer@hotmail.com'
       }
+ab['Matsumoto']
 
 def printDict(aDict):
     print("Printing the dictionary object. Size is {}".format(len(aDict)))
@@ -163,7 +164,6 @@ ab['Spammer'] = 'unknown'
 printDict(ab)
 
 
-
 # Sequence test scripts
 name = 'swaroop'
 print('test 1 = {}'.format(name[1:3:1]))
@@ -176,4 +176,15 @@ print('test 6 = {}'.format(name[6:]))
 
 alist = [1, 2, 3, 1, 2, 3, 4]
 set1 = set(alist)
-print(set1)
+set1
+
+set2 = set('abc')
+alist = ('def', 'kkk')
+set3 = set2 | set(alist)
+set3
+
+name = 'Kenneth'
+name.find('ne')
+delimiter = ', '
+myList = ['hello', 'good bye', 'see you']
+delimiter.join(myList)
