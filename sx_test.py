@@ -6,15 +6,11 @@ Created in 2017 Dec.
 
 import test_module_2
 
-print("This is a test Python scripts file created by Kenneth.")
-print(dir())
 print("Invoke saySth function.")
 test_module_2.saySth()
 
-#the new print command line
-print("Let's start a new branch for development of new features")
-
-
+# this is a tes of the walk function
+# basically the dirs and files are filled with all the diretionaries and files under the root
 import os
 for root, dirs, files in os.walk("/Users/kenneth.shu/dev/Python/PythonStudy/Ex backup files/file_folder"):
     for aDir in dirs:
@@ -25,7 +21,9 @@ for root, dirs, files in os.walk("/Users/kenneth.shu/dev/Python/PythonStudy/Ex b
         #zfn = absfn[len(path2zip)+len(os.sep):] #XXX: relative path
         #zipfile.write(absfn, zfn)
 
+# see how the os.path.split function works
 os.path.split("/Users/kenneth.shu/dev/Python/PythonStudy/Ex backup files/file_folder/1.txt")
 
-for a, b in ((1, 2), (3, 4)):
+# see how the multiple vars in the for statement works
+for a, b in ((1, 2), (3, 4), (5, 6), (99, 100)):
     print(str(a) + "|" + str(b))
