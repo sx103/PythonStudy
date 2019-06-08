@@ -10,8 +10,10 @@ import time
 import zipfile
 
 # zip all the files in a folder
+
+
 def zipthedir(path2zip, azipfile):
-    """ this function helps to zip a folder using the relative path """
+    """ this function zip the whole folder provided in the argument using the relative path """
     assert os.path.isdir(path2zip)
     upperpath = os.path.abspath(path2zip + os.sep + "..")
     #print("upperpath:" + upperpath)
@@ -19,12 +21,12 @@ def zipthedir(path2zip, azipfile):
     for root, dirs, files in os.walk(path2zip):
         for dirn in dirs:
             absdirn = os.path.join(root, dirn)
-            zdirn = absdirn[len(upperpath)+len(os.sep):]
+            zdirn = absdirn[len(upperpath) + len(os.sep):]
             #print("**" + absdirn + "*" + zdirn)
             azipfile.write(absdirn, zdirn)
         for fn in files:
             absfn = os.path.join(root, fn)
-            zfn = absfn[len(upperpath)+len(os.sep):]
+            zfn = absfn[len(upperpath) + len(os.sep):]
             #print("||" + absfn + "|" + zfn)
             azipfile.write(absfn, zfn)
 
@@ -52,7 +54,8 @@ comment_len = len(comment)
 if comment_len == 0:
     zip_file_name = time.strftime(time_format) + ".zip"
 else:
-    zip_file_name = time.strftime(time_format) + "_" + comment.replace(' ', '_') + ".zip"
+    zip_file_name = time.strftime(
+        time_format) + "_" + comment.replace(' ', '_') + ".zip"
 
 # add all the specified files in the config file to the backup zip file
 backup_file_name = backup_folder_path + os.sep + zip_file_name
@@ -70,4 +73,4 @@ print('Files backup successfully.')
 
 # show the backup folder
 #ls_command = 'ls -l -R "' + backup_folder_path + os.sep + '.."'
-#os.system(ls_command)
+# os.system(ls_command)

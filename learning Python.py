@@ -5,7 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 
-print("Hello my dear friend") # this is a comment for this command
+print("Hello my dear friend")  # this is a comment for this command
 
 word = "'trible quotes'"
 print('''This is a test of the format function \n and the {0:_^40}.
@@ -15,14 +15,14 @@ string = r"use \n and \t in your string"
 print(string)
 
 
-i=1
+i = 1
 print(i)
-i=i+23
+i = i + 23
 print(i)
 
-print(2<<3)
-print(16>>4)
-print(not 3>2)
+print(2 << 3)
+print(16 >> 4)
+print(not 3 > 2)
 
 
 a = "hello23"
@@ -43,8 +43,8 @@ else:
 
 
 a = 0
-while a<=199:
-    print("Running. The current value is {0}.".format(0^a))
+while a <= 199:
+    print("Running. The current value is {0}.".format(0 ^ a))
     a += 1
 else:
     print("This is the end of the loop.")
@@ -55,25 +55,26 @@ print(list(range(1, 20, 3)))
 
 
 for a in range(0, 30, 3):
-#    print("Current value {0}%2 = {1}".format(a, a%2))
-#    print("odd number: {0}".format(a%2 == 1))
-    odd = (a%2 == 1)
+    #    print("Current value {0}%2 = {1}".format(a, a%2))
+    #    print("odd number: {0}".format(a%2 == 1))
+    odd = (a % 2 == 1)
     if odd:
         print("In loop odd number {0}".format(a))
     else:
         print("In loop even number {0}".format(a))
 
 
-#defineing function
+# defineing function
 def testFun(a, b):
     print("this is a test of function. a = {0} and b = {1}".format(a, b))
-#end of the function
+# end of the function
+
 
 testFun(1, 2)
 testFun("hello", "good bye")
 
 
-#Test the parameters
+# Test the parameters
 def testFunction(*values1, **nameList):
     '''This function is used to test the daynamic parameters '''
     for a in values1:
@@ -81,20 +82,23 @@ def testFunction(*values1, **nameList):
 
     for first_part, second_part in nameList.items():
         print("The name list - {0} {1}".format(first_part, second_part))
-#end of function
+# end of function
+
 
 testFunction(1, 2, 3, 9, "speical", Ken=11, Wing=12, Steve=13, Stan=14)
 print(testFunction.__doc__)
 
 
-#Use sys and os
+# Use sys and os
 import os
 import sys
+
 
 def test():
     print("the system path is [", sys.path,  "]\n")
     print("The current working folder is [", os.getcwd(), "]")
-#end of the function
+# end of the function
+
 
 test()
 
@@ -104,8 +108,6 @@ test_module_2.saySth()
 
 
 dir()
-
-
 
 # This is my shopping list
 shoplist = ['apple', 'mango', 'carrot', 'banana']
@@ -142,19 +144,21 @@ testlist[2]
 # 'ab' is short for 'a'ddress'b'ook
 
 ab = {
-      'Swaroop': 'swaroop@swaroopch.com',
-      'Larry': 'larry@wall.org',
-      'Matsumoto': 'matz@ruby-lang.org',
-      'Spammer': 'spammer@hotmail.com'
-      }
+    'Swaroop': 'swaroop@swaroopch.com',
+    'Larry': 'larry@wall.org',
+    'Matsumoto': 'matz@ruby-lang.org',
+    'Spammer': 'spammer@hotmail.com'
+}
 ab['Matsumoto']
+
 
 def printDict(aDict):
     print("Printing the dictionary object. Size is {}".format(len(aDict)))
     for key_id, value in aDict.items():
         print("[{}] = {}".format(key_id, value))
     print("\n")
-#end of the function
+# end of the function
+
 
 printDict(ab)
 del ab['Larry']
@@ -170,7 +174,8 @@ print('test 1 = {}'.format(name[1:3:1]))
 print('test 2 = {}'.format(name[::1]))
 print('test 3 = {}'.format(name[::-1]))
 print('test 4 = {}'.format(name[1::-1]))
-print('test 5 = {}'.format(name[-11:])) #index out of range will stay at the beginning/end of hte sequence
+# index out of range will stay at the beginning/end of hte sequence
+print('test 5 = {}'.format(name[-11:]))
 print('test 6 = {}'.format(name[6:]))
 
 
@@ -188,3 +193,17 @@ name.find('ne')
 delimiter = ', '
 myList = ['hello', 'good bye', 'see you']
 delimiter.join(myList)
+
+# 2018-02-10
+import sys
+print(sys.version_info)
+
+animals = ['python', 'dog', 'cat']
+print('bb'.join(animals))
+
+# use of lambda forms
+def myFunction(astr):
+    return lambda beginstr: beginstr + astr
+
+f = myFunction('whatever string')
+f('beginging string')
